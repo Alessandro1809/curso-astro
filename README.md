@@ -10,7 +10,7 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **ASTRO** 
 
-## 🚀 Documentacion escencial para aprender ASTRO]
+## 🚀 Documentacion escencial para aprender ASTRO
 
 Este repositorio da seguimiento al material impresindible para dominar el framework en su totalidad desde
 los conceptos mas basico hhasta las funcionalidades mas complejas de ASTRO
