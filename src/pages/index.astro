@@ -1,4 +1,5 @@
 ---
+import Customtitle from "../components/Customtitle.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 //server only
 const name = "Alessandro Díaz Gonzalez";
@@ -6,13 +7,11 @@ const name = "Alessandro Díaz Gonzalez";
 
 	<MainLayout title="Home">
 		<h1>{name}</h1>
-
+		<h1>{<Customtitle title="This is the home page" />}</h1>
 		<p>momento actual: {new Date().toLocaleString()}</p>
 
 		<p id="realYear">momento actual  real: {}</p>
-		<footer>
-
-		</footer>
+		
 		<script>
 			//client only
 			const currentYear:  number = new Date().getFullYear();
@@ -25,5 +24,16 @@ const name = "Alessandro Díaz Gonzalez";
 	
 		</script>
 	</MainLayout>
-	
+	<!-- is:global aplica a todas las etiquetas -->
+	 <!-- is:inline  aplica  a la etiqueta pero mantiene  el scope -->
+	  <!-- is:raw No toca al elemento nihace ningun procesamiento  -->
+	<style is:global> 
+		/* styles cada  etiqueta style tiene scope */
+		h1 {
+			font-size: 3rem;
+			margin: 0;
+			padding: 0;
+			color: red;
+		}
+	</style>
 
